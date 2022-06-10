@@ -1,0 +1,125 @@
+:root {
+  --textarea-height: 4.6rem;
+}
+
+.form {
+  display: grid;
+
+  @include media(L) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 1.7rem;
+  }
+
+  &__group {
+    position: relative;
+    text-align: left;
+
+    &--textarea {
+      margin-top: 2rem;
+
+      @include media(L) {
+        grid-column: 1 / span 2;
+      }
+    }
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding-top: 1.8rem;
+    padding-bottom: .5rem;
+    border-bottom: .1rem solid #C4C4C4;
+    color: #878787;
+
+    &:focus,
+    &:not(:placeholder-shown) {
+      ~ .form__label {
+        transform: translateY(-60%) scale(.8);
+      }
+    }
+
+    &.is-error {
+      border-color: red;
+
+      ~ .form__label {
+        color: red;
+
+        .form__label-required {
+          color: red;
+        }
+      }
+
+      ~ .form__error {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__label {
+    position: absolute;
+    left: 0;
+    top: 1.6rem;
+    line-height: 1.5;
+    color: #878787;
+    font-size: 1.5rem;
+    font-weight: 500;
+    white-space: nowrap;
+    pointer-events: none;
+    transform-origin: top left;
+    transition: transform .2s;
+
+    &-required {
+      position: relative;
+      right: -.5rem;
+      color: var(--color-mark);
+      transition: color .2s;
+    }
+  }
+
+  &__textarea {
+    height: var(--textarea-height);
+    line-height: 1.1;
+    overflow: hidden;
+    resize: none;
+
+    ~ .form__label {
+      top: -1.4rem;
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    width: 100%;
+    margin-top: 2rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 6rem;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(223.08deg, #FFC953 6.11%, #C8972C 97.63%);
+    border-radius: 4.5rem;
+    color: #fff;
+
+    @include media(L) {
+      width: initial;
+      min-width: 26.5rem;
+      margin-top: 0;
+    }
+  }
+
+  &__error {
+    position: relative;
+    top: -.2rem;
+    display: inline-block;
+    color: red;
+    font-size: 1.2rem;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateX(2rem);
+    transition: opacity .2s,
+                transform .2s;
+  }
+}

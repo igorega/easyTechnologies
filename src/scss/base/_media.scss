@@ -1,0 +1,37 @@
+$S: 576;
+$M: 768;
+$L: 992;
+$XL: 1200;
+
+:root {
+  --S: #{$S};
+  --M: #{$M};
+  --L: #{$L};
+  --XL: #{$XL};
+}
+
+@function translate-media-condition($c) {
+  $condMap: (
+    'S': '(min-width: #{$S}px)',
+    'M': '(min-width: #{$M}px)',
+    'L': '(min-width: #{$L}px)',
+    'XL': '(min-width: #{$XL}px)',
+  );
+  $result: map-get( $condMap, $c );
+  @if ( $result == null ) {
+    $result: $c;
+  }
+  @return $result;
+}
+
+@mixin media($args...) {
+  $query: '';
+  @each $arg in $args {
+    $op: '';
+    @if ($query != '') {
+      $op: ' and ';
+    }
+    $query: $query + $op + translate-media-condition($arg);
+  }
+  @media #{$query}  { @content; }
+}

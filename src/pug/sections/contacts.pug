@@ -1,0 +1,52 @@
+section.contacts
+  .container
+    .contacts__content
+      // item
+      .contacts__item
+        h2.contacts__title Get in Touch with us
+
+        p.contacts__desc at EasyTech, we value our customers and appreciate hearing how we can improve and better support you.
+          br
+          | If you have any question, do not hesitate to contact us!
+
+        address.contacts__address
+          span.contacts__address-br Sofia, ul.“Okolovrasten pat” 251 G, 1715 g.k. Mladost 4
+          .contacts__address-inner
+            a.contacts__mail(href='mailto:info@easytech.com') info@easytech.com
+            a(href='tel:+359024263648') +359 02 426 36 48
+
+      // item
+      .contacts__item
+        // form
+        form#form.form(method='', action='')
+          .form__group
+            input#name.form__input(type='text', name='name', placeholder=' ', required)
+            label.form__label(for='name') Name
+              span.form__label-required *
+            span.form__error Name cannot be blank
+
+          .form__group
+            input#name.form__input(type='text', name='lastName', placeholder=' ', required)
+            label.form__label(for='lastName') Last Name
+              span.form__label-required *
+            span.form__error Last Name cannot be blank
+
+          .form__group
+            input#phone.form__input(type='tel', name='phone', placeholder=' ', required)
+            label.form__label(for='phone') Phone
+              span.form__label-required *
+            span.form__error Phone cannot be blank
+
+          .form__group
+            input#email.form__input(type='email', name='email', placeholder=' ', required)
+            label.form__label(for='email') Email
+              span.form__label-required *
+            span.form__error Email cannot be blank or incorrect
+
+          .form__group.form__group--textarea
+            textarea#message.form__textarea(type='text', name='message', placeholder=' ', required)
+            label.form__label(for='message') Your message
+              span.form__label-required *
+            span.form__error Message cannot be blank
+
+          button.form__btn(type='submit', name='submitBtn') send message

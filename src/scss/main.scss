@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@import 'reset';
+
+// base
+@import 'base/media';
+@import 'base/vars';
+@import 'base/mixins';
+@import 'base/base';
+@import 'base/typography';
+
+// common
+@import 'common/common';
+
+// layout
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/footer';
+
+// components
+@import 'components/forms';
+@import 'components/buttons';
+@import 'components/accordion';
+
+// sections
+@import 'sections/home';
+@import 'sections/about';
+@import 'sections/stories';
+@import 'sections/contacts';

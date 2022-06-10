@@ -1,0 +1,158 @@
+.stories {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  &__header {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-bottom: 1.3rem;
+    padding-bottom: .7rem;
+    border-bottom: .05rem solid var(--color-mark);
+
+    @include media(M) {
+      grid-template-columns: initial;
+      justify-content: initial;
+      align-items: initial;
+      gap: 0;
+      margin-bottom: 2.2rem;
+      padding-bottom: 0;
+      text-align: center;
+      border-bottom: none;
+    }
+
+    &-title {
+      display: flex;
+      align-items: center;
+
+      @include media(M) {
+        z-index: 1;
+        background-color: #fff;
+        padding-left: 2.2rem;
+        padding-right: 2.2rem;
+      }
+    }
+
+    &-link {
+      font-size: 1.3rem;
+      line-height: 1.6;
+      color: var(--color-mark);
+
+      @include media(M) {
+        font-size: 1.4rem;
+      }
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+
+      @include media(M) {
+        position: relative;
+        justify-content: center;
+
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: .05rem;
+          background-color: var(--color-mark);
+        }
+      }
+    }
+  }
+
+  &__icon {
+    margin-right: 1rem;
+  }
+
+  &__items {
+    display: grid;
+    gap: 2rem;
+
+    @include media(M) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+    }
+
+    @include media(XL) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__item {
+    position: relative;
+    min-height: 37.3rem;
+    display: flex;
+    align-items: flex-end;
+    padding: 3.5rem 3rem;
+
+    @include media(M) {
+      min-height: 49.2rem;
+      padding: 4.8rem 4rem;
+    }
+
+    &::after {
+      content: '';
+      @include cover;
+      background-image: linear-gradient(180deg, rgba(8, 32, 48, 0) 30.73%, #082030 100%);
+    }
+
+    &:last-child {
+      @include media(M) {
+        width: 100%;
+        max-width: calc(50% - 1.5rem);
+        grid-column: 1 / span 2;
+        justify-self: center;
+      }
+
+      @include media(XL) {
+        width: initial;
+        max-width: initial;
+        grid-column: initial;
+        justify-self: initial;
+      }
+    }
+
+    &-img {
+      @include cover;
+      object-fit: cover;
+    }
+
+    &-header {
+      z-index: 1;
+      max-width: 20.8rem;
+
+      @include media(M) {
+        max-width: 27.5rem;
+      }
+    }
+
+    &-title {
+      margin-bottom: .6rem;
+      font-weight: 600;
+      font-size: 1.3rem;
+      line-height: 1.7;
+
+      @include media(M) {
+        margin-bottom: .8rem;
+        font-size: 1.6rem;
+      }
+    }
+
+    &-desc {
+      font-size: 1.8em;
+      line-height: 1.2;
+
+      @include media(M) {
+        font-size: 2.4rem;
+      }
+    }
+  }
+}

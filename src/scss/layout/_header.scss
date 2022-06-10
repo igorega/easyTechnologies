@@ -1,0 +1,19 @@
+.header {
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: var(--header-height);
+
+  &__content {
+    padding-top: 2rem;
+    text-align: center;
+
+    @include media(M) {
+      padding-top: 3.2rem;
+      text-align: left;
+    }
+  }
+}

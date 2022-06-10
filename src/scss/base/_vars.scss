@@ -1,0 +1,27 @@
+:root {
+  // fonts
+  --font-main: 'Inter', sans-serif;
+
+  // colors
+  --color-main: #fff;
+  --color-mark: #C8972C;
+
+  // common
+  --container: 117rem;
+
+  --padding: 2rem;
+
+  @include media(M) {
+    --padding: 4rem;
+  }
+
+  @include media(L) {
+    --padding: 6rem;
+  }
+
+  --header-height: 6rem;
+
+  @include media(L) {
+    --header-height: 7.2rem;
+  }
+}

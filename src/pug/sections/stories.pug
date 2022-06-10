@@ -1,0 +1,43 @@
+mixin list
+  svg(class='stories__icon' width='22' height='27' viewBox='0 0 22 27' fill='none' xmlns='http://www.w3.org/2000/svg')
+    path(fill-rule='evenodd' clip-rule='evenodd' d='M1.94119 26.5H20.0588C21.1309 26.5 22 25.6269 22 24.55V15.45C22 15.0911 21.7102 14.8 21.3529 14.8C20.9956 14.8 20.7059 15.0911 20.7059 15.45V24.55C20.7059 24.9089 20.4161 25.2 20.0588 25.2H1.94119C1.58383 25.2 1.29413 24.9089 1.29413 24.55L1.29412 2.45C1.29412 2.09101 1.58382 1.8 1.94118 1.8H17.555C17.9123 1.8 18.202 2.09102 18.202 2.45V21.95C18.202 22.3089 18.4918 22.6 18.8491 22.6C19.2064 22.6 19.4961 22.3089 19.4961 21.95V2.45C19.4961 1.37304 18.627 0.5 17.555 0.5H1.94118C0.869091 0.5 0 1.37304 0 2.45L1.29588e-05 24.55C1.29588e-05 25.6269 0.869104 26.5 1.94119 26.5Z' fill='#C8972C')
+    path(fill-rule='evenodd' clip-rule='evenodd' d='M14.8822 5.8625H4.52923V8.7875H14.8822V5.8625ZM4.52923 4.5625C3.81451 4.5625 3.23511 5.14454 3.23511 5.8625V8.7875C3.23511 9.50548 3.81451 10.0875 4.52923 10.0875H14.8822C15.5969 10.0875 16.1763 9.50548 16.1763 8.7875V5.8625C16.1763 5.14454 15.5969 4.5625 14.8822 4.5625H4.52923Z' fill='#C8972C')
+    path(fill-rule='evenodd' clip-rule='evenodd' d='M3.23511 12.2C3.23511 11.8411 3.52481 11.55 3.88217 11.55H15.5292C15.8865 11.55 16.1763 11.8411 16.1763 12.2C16.1763 12.559 15.8865 12.85 15.5292 12.85H3.88217C3.52481 12.85 3.23511 12.559 3.23511 12.2Z' fill='#C8972C')
+    path(fill-rule='evenodd' clip-rule='evenodd' d='M3.23511 14.8C3.23511 14.4411 3.52481 14.15 3.88217 14.15H15.5292C15.8865 14.15 16.1763 14.4411 16.1763 14.8C16.1763 15.1591 15.8865 15.45 15.5292 15.45H3.88217C3.52481 15.45 3.23511 15.1591 3.23511 14.8Z' fill='#C8972C')
+    path(fill-rule='evenodd' clip-rule='evenodd' d='M3.23511 17.4C3.23511 17.0411 3.52481 16.75 3.88217 16.75H15.5292C15.8865 16.75 16.1763 17.0411 16.1763 17.4C16.1763 17.7591 15.8865 18.05 15.5292 18.05H3.88217C3.52481 18.05 3.23511 17.7591 3.23511 17.4Z' fill='#C8972C')
+    path(fill-rule='evenodd' clip-rule='evenodd' d='M3.23511 20C3.23511 19.6411 3.52481 19.35 3.88217 19.35H10.3528C10.7101 19.35 10.9998 19.6411 10.9998 20C10.9998 20.3591 10.7101 20.65 10.3528 20.65H3.88217C3.52481 20.65 3.23511 20.3591 3.23511 20Z' fill='#C8972C')
+
+section.stories
+  .container
+    header.stories__header
+      h2.title.title--m
+        span.stories__header-title
+          +list
+          span Stories
+
+      a.stories__header-link(href='#') View more
+
+    .stories__items
+      // item
+      .stories__item
+        img.stories__item-img(src='img/stories-item.jpg', alt='')
+
+        a.stories__item-header(href='#')
+          p.stories__item-title January 24, 2022
+          p.stories__item-desc World's largest and most liquid market
+
+      // item
+      .stories__item
+        img.stories__item-img(src='img/stories-item.jpg', alt='')
+
+        a.stories__item-header(href='#')
+          p.stories__item-title Services
+          p.stories__item-desc Hiring the best trading educators
+
+      // item
+      .stories__item
+        img.stories__item-img(src='img/stories-item.jpg', alt='')
+
+        a.stories__item-header(href='#')
+          p.stories__item-title Careers
+          p.stories__item-desc Be part of All New Investments

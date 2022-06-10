@@ -1,0 +1,16 @@
+body {
+  background-color: #fff;
+  color: var(--color-main);
+	font-family: var(--font-main);
+	font-size: 1.4rem;
+  font-weight: 400;
+}
+
+strong {
+	font-weight: 700;
+}
+
+::selection {
+  color: #fff;
+  background-color: #0088A5;
+}

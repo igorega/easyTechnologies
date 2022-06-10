@@ -1,0 +1,70 @@
+  .home {
+    position: relative;
+    min-height: 55.7rem;
+    padding-top: 11.4rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../img/home-bg-m.png');
+
+    @include media(M) {
+      min-height: 51.4rem;
+      padding-top: 12.6rem;
+      background-image: url('../img/home-bg.png');
+    }
+
+    &::after {
+      content: '';
+      @include cover;
+      background-color: rgba(0, 136, 165, 0.6);
+    }
+
+  &__br {
+    display: block;
+
+    @include media(M) {
+      display: inline-block;
+    }
+  }
+
+  &__header {
+    z-index: 1;
+    position: relative;
+    text-align: center;
+
+    @include media(M) {
+      text-align: left;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 4.3rem;
+    line-height: 1.2;
+
+    @include media(M) {
+      max-width: 53rem;
+      margin-bottom: 2rem;
+      font-size: 8rem;
+      line-height: 1;
+    }
+  }
+
+  &__desc {
+    max-width: 16rem;
+    margin-bottom: 7.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2.2rem;
+    line-height: .95;
+
+    @include media(M) {
+      max-width: initial;
+      margin-bottom: 4.4rem;
+      margin-left: initial;
+      margin-right: initial;
+      font-size: 2.8rem;
+    }
+  }
+}

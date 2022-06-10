@@ -7,6 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "igorega@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:igorega/easyTechnologies.git"
+  },
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.27.10",
